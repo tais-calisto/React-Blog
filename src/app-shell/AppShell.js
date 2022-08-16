@@ -74,7 +74,7 @@ const AppShellMantine = () => {
             </MediaQuery>
             {/* Imagem da Logo */}
             <Avatar src='' alt='' />
-            <Text>Marco Felipe</Text>
+            <Text>React Blog</Text>
             <SocialMediaLinks />
           </div>
         </Header>
