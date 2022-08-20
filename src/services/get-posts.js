@@ -148,3 +148,24 @@ export const getPostsByCategories = async (catLink) => {
   const result = await request(graphqlAPI, query, variables)
   return result.posts
 }
+
+export const getFeaturedPosts = async () => {
+  const query = gql`
+    query GetFeaturedPosts {
+      posts(last: 6, where: { featuredPost: true }) {
+        title
+        image {
+          url
+        }
+        link
+        id
+        categories {
+          link
+        }
+      }
+    }
+  `
+
+  const result = await request(graphqlAPI, query)
+  return result.posts
+}
