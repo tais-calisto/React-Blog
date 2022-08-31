@@ -48,8 +48,9 @@ const comments = async (obj) => {
   try {
     const data = await graphQLClient.request(mutation, variables)
     console.log(data)
+    return true
   } catch (error) {
-    console.log('erro')
+    console.log(error)
   }
 }
 

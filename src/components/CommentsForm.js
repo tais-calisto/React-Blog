@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react'
+import React, { useState, useRef, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 import comments from '../services/comments'
 import {
@@ -8,6 +8,7 @@ import {
   Textarea,
   Button,
   Checkbox,
+  Text,
 } from '@mantine/core'
 
 const CommentsForm = () => {
@@ -22,6 +23,16 @@ const CommentsForm = () => {
   const storeDataEl = useRef()
 
   const { postId: slug } = useParams()
+
+  useEffect(() => {
+    const name = window.localStorage.getItem('name')
+    const email = window.localStorage.getItem('email')
+    if (name && email) {
+      storeDataEl.current.checked = true
+      nameEl.current.value = name
+      emailEl.current.value = email
+    }
+  })
 
   const handleCommentSubmission = () => {
     if (!nameEl.current.value) {
@@ -51,7 +62,11 @@ const CommentsForm = () => {
         slug,
       }
 
-      comments(commentObj)
+      const submitComment = comments(commentObj)
+
+      if (submitComment) {
+        setshowSuccessMessage(true)
+      }
 
       if (storeData) {
         window.localStorage.setItem('name', name)
@@ -103,6 +118,11 @@ const CommentsForm = () => {
       >
         Enviar
       </Button>
+      {showSuccessMessage && (
+        <Text size='md' mt='sm'>
+          Comentário enviado para moderação
+        </Text>
+      )}
     </Card>
   )
 }
