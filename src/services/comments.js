@@ -1,4 +1,4 @@
-import { GraphQLClient, gql } from 'graphql-request'
+import { GraphQLClient, gql, request } from 'graphql-request'
 
 const graphqlAPI = process.env.REACT_APP_PUBLIC_GRAPHCMS_ENDPOINT
 const graphqlToken = process.env.REACT_APP_GRAPHCMS_TOKEN
@@ -55,3 +55,25 @@ const comments = async (obj) => {
 }
 
 export default comments
+
+export const getPostComments = async (link) => {
+  const query = gql`
+    query GetPostsComments($link: String!) {
+      posts(where: { link: $link }) {
+        comments {
+          comment
+          createdAt
+          email
+          id
+          name
+        }
+      }
+    }
+  `
+  const variables = {
+    link: link,
+  }
+
+  const result = await request(graphqlAPI, query, variables)
+  return result.posts[0].comments
+}

@@ -15,7 +15,6 @@ const CommentsForm = () => {
   const [errorName, setErrorName] = useState(false)
   const [errorEmail, setErrorEmail] = useState(false)
   const [errorComment, setErrorComment] = useState(false)
-  const [localStorage, setlocalStorage] = useState(null)
   const [showSuccessMessage, setshowSuccessMessage] = useState(false)
   const commentEl = useRef()
   const nameEl = useRef()
@@ -32,7 +31,7 @@ const CommentsForm = () => {
       nameEl.current.value = name
       emailEl.current.value = email
     }
-  })
+  }, [])
 
   const handleCommentSubmission = () => {
     if (!nameEl.current.value) {
@@ -79,14 +78,8 @@ const CommentsForm = () => {
   }
 
   return (
-    <Card
-      shadow='sm'
-      p='lg'
-      radius='md'
-      withBorder
-      style={{ marginTop: '3rem' }}
-    >
-      <Title order={3}>Comentários</Title>
+    <Card shadow='sm' p='lg' radius='md' withBorder mt='lg'>
+      <Title order={3}>Enviar comentário</Title>
       <TextInput
         mt='lg'
         label='Nome:'

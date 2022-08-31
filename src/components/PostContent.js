@@ -6,6 +6,7 @@ import { Card, Image, Text, Badge, Group, Title } from '@mantine/core'
 import { getPostDetails } from '../services/get-posts'
 import { DateTime } from 'luxon'
 import CommentsForm from './CommentsForm'
+import PostComments from './PostComments'
 
 const PostContent = () => {
   const { postId } = useParams()
@@ -44,6 +45,7 @@ const PostContent = () => {
           })}
         </Card>
         <CommentsForm />
+        <PostComments />
       </>
     )
   }
