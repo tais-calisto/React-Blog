@@ -7,15 +7,6 @@ const CategoryPosts = () => {
   const [posts, setPosts] = useState([])
   const { catId } = useParams()
 
-  // const fetchData = async () => {
-  //   try {
-  //     const results = await getPostsByCategories(catId)
-  //     setPosts(results)
-  //   } catch (error) {
-  //     console.log(error)
-  //   }
-  // }
-
   useMemo(async () => {
     try {
       const results = await getPostsByCategories(catId)

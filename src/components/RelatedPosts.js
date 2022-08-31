@@ -10,16 +10,6 @@ const RelatedPosts = () => {
 
   const [relatedPosts, setRelatedPosts] = useState([])
 
-  // const fetchPosts = async () => {
-  //   try {
-  //     const relatedPostsResult = await getRelatedPosts(postId, catId)
-  //     const { posts: related } = relatedPostsResult
-  //     setRelatedPosts(related)
-  //   } catch (error) {
-  //     console.log(error)
-  //   }
-  // }
-
   useMemo(async () => {
     try {
       const relatedPostsResult = await getRelatedPosts(postId, catId)
