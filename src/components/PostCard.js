@@ -18,7 +18,7 @@ function PostCard() {
 
             <Group position='apart' mt='md' mb='xs'>
               <Text size='sm'>{info.author.name}</Text>
-              <Badge color='cyan' variant='light'>
+              <Badge color='gold' variant='light'>
                 {DateTime.fromISO(info.publishedAt).toLocaleString(
                   'dd LLL yyyy'
                 )}
@@ -33,7 +33,7 @@ function PostCard() {
 
             <Button
               variant='light'
-              color='blue'
+              color='gold'
               fullWidth
               mt='md'
               radius='md'

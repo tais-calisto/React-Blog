@@ -11,7 +11,7 @@ const Categories = () => {
   if (categories) {
     return (
       <>
-        <Title order={4} align='center'>
+        <Title order={4} align='center' style={{ color: '#9E7451' }}>
           Categorias
         </Title>
         <Navbar.Section mt='md' grow>
@@ -23,6 +23,7 @@ const Categories = () => {
                 component={Link}
                 to={`category/${category.link}`}
                 variant='subtle'
+                color='gray'
                 active
               />
             )

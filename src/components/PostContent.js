@@ -29,7 +29,7 @@ const PostContent = () => {
           </Card.Section>
           <Group position='apart' mt='md' mb='xs'>
             <Title order={2}>{info.title}</Title>
-            <Badge color='cyan' variant='light'>
+            <Badge variant='light'>
               {DateTime.fromISO(info.createdAt).toLocaleString('dd LLL yyyy')}
             </Badge>
           </Group>

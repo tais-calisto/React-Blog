@@ -9,12 +9,13 @@ const RecentPost = () => {
 
   return (
     <>
-      <Title order={4} align='center'>
+      <Title mb='md' order={4} align='center' style={{ color: '#9E7451' }}>
         Posts Recentes
       </Title>
       {recentPosts.map((post) => {
         return (
           <NavLink
+            color='gray'
             variant='subtle'
             active
             key={post.id}

@@ -6,12 +6,13 @@ const Newsletter = () => {
   return (
     <>
       <Navbar.Section>
-        {/* Newsletter */}
-        <Text>Assine nossa newsletter</Text>
+        <Text>Assine nossa newsletter: </Text>
         <Space h='lg' />
         <Input placeholder='Seu melhor email' />
         <Space h='lg' />
-        <Button variant='light'>Assinar</Button>
+        <Button variant='light' color='gold'>
+          Assinar
+        </Button>
       </Navbar.Section>
     </>
   )

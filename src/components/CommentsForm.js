@@ -104,6 +104,7 @@ const CommentsForm = () => {
         ref={storeDataEl}
       />
       <Button
+        variant='light'
         mt='sm'
         onClick={() => {
           handleCommentSubmission()

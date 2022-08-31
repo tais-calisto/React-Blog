@@ -22,12 +22,13 @@ const RelatedPosts = () => {
 
   return (
     <>
-      <Title order={4} align='center'>
+      <Title mb='md' order={4} align='center' style={{ color: '#9E7451' }}>
         Posts Relacionados
       </Title>
       {relatedPosts.map((post) => {
         return (
           <NavLink
+            color='gray'
             variant='subtle'
             active
             key={post.link}
