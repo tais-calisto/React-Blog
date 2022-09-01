@@ -1,6 +1,6 @@
 import React from 'react'
 import { useState } from 'react'
-import { useParams } from 'react-router-dom'
+import { useParams, Link } from 'react-router-dom'
 
 import PostCard from '../components/PostCard'
 import Categories from '../components/Categories'
@@ -77,7 +77,7 @@ const AppShellMantine = () => {
             </MediaQuery>
 
             <MediaQuery smallerThan='sm' styles={{ display: 'none' }}>
-              <Avatar src={logo} alt='' />
+              <Avatar src={logo} alt='' component={Link} to='/blog' />
             </MediaQuery>
 
             <MediaQuery smallerThan='md' styles={{ display: 'none' }}>

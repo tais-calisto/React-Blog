@@ -1,4 +1,6 @@
 import '@fontsource/cormorant-garamond'
+import '@fontsource/barlow'
+
 const theme = {
   colorScheme: 'dark',
   colors: {
@@ -29,8 +31,7 @@ const theme = {
   },
   primaryColor: 'gold',
 
-  // fontFamily: 'Verdana, sans-serif',
-  // fontFamilyMonospace: 'Monaco, Courier, monospace',
+  fontFamily: 'Barlow, sans-serif',
   headings: { fontFamily: 'Cormorant Garamond, serif' },
 }
 

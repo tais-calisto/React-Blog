@@ -78,8 +78,10 @@ const CommentsForm = () => {
   }
 
   return (
-    <Card shadow='sm' p='lg' radius='md' withBorder mt='lg'>
-      <Title order={3}>Enviar comentário</Title>
+    <Card m='xl' shadow='sm' p='lg' radius='md' withBorder mt='lg'>
+      <Title style={{ color: '#9E7451' }} order={3}>
+        Enviar comentário
+      </Title>
       <TextInput
         mt='lg'
         label='Nome:'

@@ -17,8 +17,8 @@ function PostCard() {
             </Card.Section>
 
             <Group position='apart' mt='md' mb='xs'>
-              <Text size='sm'>{info.author.name}</Text>
-              <Badge color='gold' variant='light'>
+              <Badge size='sm'>{info.author.name}</Badge>
+              <Badge variant='light'>
                 {DateTime.fromISO(info.publishedAt).toLocaleString(
                   'dd LLL yyyy'
                 )}

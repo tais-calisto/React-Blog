@@ -1,5 +1,5 @@
 import React from 'react'
-import { Avatar, Group } from '@mantine/core'
+import { Avatar, Group, Button } from '@mantine/core'
 import {
   IconBrandFacebook,
   IconBrandInstagram,
@@ -9,7 +9,8 @@ import {
 const SocialMediaLinks = () => {
   return (
     <Group>
-      <Avatar
+      <Button
+        variant='light'
         color='gold'
         radius='sm'
         component='a'
@@ -18,8 +19,9 @@ const SocialMediaLinks = () => {
         href='https://www.facebook.com/marcofelipe.torrescastello'
       >
         <IconBrandFacebook size={24} />
-      </Avatar>
-      <Avatar
+      </Button>
+      <Button
+        variant='light'
         color='gold'
         radius='sm'
         component='a'
@@ -28,8 +30,9 @@ const SocialMediaLinks = () => {
         href='https://www.instagram.com/marcofelipecastello/'
       >
         <IconBrandInstagram size={24} />
-      </Avatar>
-      <Avatar
+      </Button>
+      <Button
+        variant='light'
         color='gold'
         radius='sm'
         component='a'
@@ -38,7 +41,7 @@ const SocialMediaLinks = () => {
         href='https://www.youtube.com/channel/UCbAWyhgREukmId5MTEqKHMQ'
       >
         <IconBrandYoutube size={24} />
-      </Avatar>
+      </Button>
     </Group>
   )
 }

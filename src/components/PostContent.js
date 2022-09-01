@@ -23,12 +23,14 @@ const PostContent = () => {
     const info = post[0]
     return (
       <>
-        <Card shadow='sm' p='lg' radius='md' withBorder key={info.link}>
+        <Card m='xl' shadow='sm' p='lg' radius='md' withBorder key={info.link}>
           <Card.Section>
             <Image src={info.image.url} height={300} alt='Norway' />
           </Card.Section>
           <Group position='apart' mt='md' mb='xs'>
-            <Title order={2}>{info.title}</Title>
+            <Title style={{ color: '#9E7451' }} order={2}>
+              {info.title}
+            </Title>
             <Badge variant='light'>
               {DateTime.fromISO(info.createdAt).toLocaleString('dd LLL yyyy')}
             </Badge>

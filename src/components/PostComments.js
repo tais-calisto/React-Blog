@@ -14,8 +14,10 @@ const PostComments = () => {
   }, [postId])
 
   return (
-    <Card shadow='sm' p='lg' radius='md' withBorder mt='lg'>
-      <Title order={3}>Comentários</Title>
+    <Card m='xl' shadow='sm' p='lg' radius='md' withBorder mt='lg'>
+      <Title style={{ color: '#9E7451' }} order={3}>
+        Comentários
+      </Title>
       {comments.map((comment) => {
         return (
           <Paper shadow='xs' mt='sm' p='sm' key={comment.id}>
