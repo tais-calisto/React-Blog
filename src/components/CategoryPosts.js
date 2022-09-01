@@ -20,7 +20,6 @@ const CategoryPosts = () => {
     return (
       <SimpleGrid cols={1}>
         {posts.map((post) => {
-          console.log(post)
           return (
             <Card
               shadow='sm'

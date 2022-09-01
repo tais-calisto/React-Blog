@@ -1,6 +1,4 @@
 import React from 'react'
-
-import { Link } from 'react-router-dom'
 import { Avatar, Group } from '@mantine/core'
 import {
   IconBrandFacebook,

@@ -11,16 +11,19 @@ import RelatedPosts from '../components/RelatedPosts'
 import SocialMediaLinks from '../components/SocialMediaLinks'
 import CategoryPosts from '../components/CategoryPosts'
 
+import logo from '../images/logoGold.png'
+import name from '../images/nameGray.png'
+
 import {
   AppShell,
   Navbar,
   Header,
   Avatar,
-  Text,
   MediaQuery,
   Burger,
   useMantineTheme,
   Aside,
+  Image,
 } from '@mantine/core'
 import PostContent from '../components/PostContent'
 
@@ -47,7 +50,7 @@ const AppShellMantine = () => {
           p='md'
           hiddenBreakpoint='sm'
           hidden={!opened}
-          width={{ sm: 200, lg: 300 }}
+          width={{ sm: 200, lg: 250 }}
         >
           <Categories />
           <Newsletter />
@@ -60,7 +63,7 @@ const AppShellMantine = () => {
               display: 'flex',
               alignItems: 'center',
               height: '100%',
-              justifyContent: 'space-around',
+              justifyContent: 'space-between',
             }}
           >
             <MediaQuery largerThan='sm' styles={{ display: 'none' }}>
@@ -72,16 +75,21 @@ const AppShellMantine = () => {
                 mr='xl'
               />
             </MediaQuery>
-            {/* Imagem da Logo */}
-            <Avatar src='' alt='' />
-            <Text>React Blog</Text>
+
+            <MediaQuery smallerThan='sm' styles={{ display: 'none' }}>
+              <Avatar src={logo} alt='' />
+            </MediaQuery>
+
+            <MediaQuery smallerThan='md' styles={{ display: 'none' }}>
+              <Image src={name} fit='cover' width='300px'></Image>
+            </MediaQuery>
             <SocialMediaLinks />
           </div>
         </Header>
       }
       aside={
         <MediaQuery smallerThan='sm' styles={{ display: 'none' }}>
-          <Aside p='md' hiddenBreakpoint='sm' width={{ sm: 200, lg: 300 }}>
+          <Aside p='md' hiddenBreakpoint='sm' width={{ sm: 200, lg: 250 }}>
             {postId ? <RelatedPosts /> : <RecentPost />}
           </Aside>
         </MediaQuery>

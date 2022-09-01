@@ -22,7 +22,7 @@ const RelatedPosts = () => {
 
   return (
     <>
-      <Title mb='md' order={4} align='center' style={{ color: '#9E7451' }}>
+      <Title mb='md' order={3} align='center' style={{ color: '#9E7451' }}>
         Posts Relacionados
       </Title>
       {relatedPosts.map((post) => {

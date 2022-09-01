@@ -10,7 +10,9 @@ const BlogLinks = () => {
   if (recentPosts.length > 1) {
     return (
       <>
-        <Title>Últimas publicações</Title>
+        <Title align='center' p='md' style={{ color: '#9E7451' }}>
+          Últimas publicações
+        </Title>
         <Carousel
           loop
           dragFree

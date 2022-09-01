@@ -9,7 +9,7 @@ const RecentPost = () => {
 
   return (
     <>
-      <Title mb='md' order={4} align='center' style={{ color: '#9E7451' }}>
+      <Title mb='md' order={3} align='center' style={{ color: '#9E7451' }}>
         Posts Recentes
       </Title>
       {recentPosts.map((post) => {

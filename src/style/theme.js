@@ -1,5 +1,4 @@
-import { IconDentalBroken } from '@tabler/icons'
-
+import '@fontsource/cormorant-garamond'
 const theme = {
   colorScheme: 'dark',
   colors: {
@@ -29,6 +28,10 @@ const theme = {
     ],
   },
   primaryColor: 'gold',
+
+  // fontFamily: 'Verdana, sans-serif',
+  // fontFamilyMonospace: 'Monaco, Courier, monospace',
+  headings: { fontFamily: 'Cormorant Garamond, serif' },
 }
 
 export default theme

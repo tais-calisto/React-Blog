@@ -1,11 +1,14 @@
-import React, { useState } from 'react'
+import React from 'react'
 import BlogLinks from '../components/BlogLinks'
 import HomeLinks from '../components/HomeLinks'
-import { AppShell, Header, Avatar, Text, useMantineTheme } from '@mantine/core'
+import { AppShell, Header, Avatar, useMantineTheme } from '@mantine/core'
+import logo from '../images/logoGold.png'
+import Hero from '../components/Hero'
+import HomeFooter from '../components/HomeFooter'
 
 const Home = () => {
   const theme = useMantineTheme()
-  const [opened, setOpened] = useState(false)
+
   return (
     <AppShell
       styles={{
@@ -26,17 +29,16 @@ const Home = () => {
               justifyContent: 'space-around',
             }}
           >
-            {/* Imagem da Logo */}
+            <Avatar src={logo} alt='' />
 
-            <Avatar src='' alt='' />
-            <Text>React Blog</Text>
             <HomeLinks />
           </div>
         </Header>
       }
     >
+      <Hero />
       <BlogLinks />
-      <Text>Resize app to see responsive navbar in action</Text>
+      <HomeFooter />
     </AppShell>
   )
 }
